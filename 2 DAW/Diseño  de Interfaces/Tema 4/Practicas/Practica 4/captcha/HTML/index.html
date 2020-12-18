@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>API Recaptcha</title>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lex8-QZAAAAANoXW0SUtrOCV_F_ZVdg1goTQyYV"></script>
+    <script src="../JS/script.js" defer></script>
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+
+    <form id="registro" action="../PHP/registro.php" method="post">
+        <input type="email" id="email" name="email">
+        <br>
+        <br>
+        <input type="submit" value="Registrarse" id="register" onclick="onClick(event)">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Form</h1>
+
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="nameForm" /><br /><br />
+            <label for="direccion">Dirección:</label>
+            <input type="text" name="direccion" id="dirrecionForm" /><br /><br />
+            <label for="dni">NIF:</label>
+            <input type="text" name="nif" id="nifForm" maxlength="9" /><br /><br />
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" name="fechaNac" id="fechaNacimiento" /><br /><br />
+            <label for="name">Codigo Postal: </label>
+            <input type="text" name="postal" id="postal" maxlength="5" /><br /><br />
+            <label for="pais">Pais:</label>
+            <input type="list" name="pais" list="pais" id="paisForm" /><br /><br />
+            <datalist id="pais">
+                <option>España</option>
+                <option>India</option>
+                <option>Austria</option>
+                <option>Francia</option>
+                <option>Japon</option>
+                <option>Alemania</option>
+                <option>Romania</option>
+            </datalist>
+
+            <label for="genero">Genero:</label><br />
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Masculino</label><br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Femenino</label><br />
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Otro</label><br /><br />
+
+            <label for="Preferencias">Preferencias:</label><br />
+            <input type="checkbox" id="color1" name="color" value="Light Blue" />
+            <label for="color1"> Light Blue</label><br />
+            <input type="checkbox" id="color2" name="color" value="Light Green" />
+            <label for="color2"> Light Green</label><br />
+            <input type="checkbox" id="color3" name="color" value="Light Pink" />
+            <label for="color3"> Light pink</label><br /><br />
+
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefonoForm" maxlength="9" /><br /><br />
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="emailForm" /><br /><br />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="passwordForm" /><br /><br />
+            <label for="PasswordRepet">Repeat Password:</label>
+            <input type="password" name="passwordRe" id="passwordRe" /><br /><br />
+            <input type="button" onclick="validate_form()" value="Enviar" />
+            <input type="reset" value="Borrar" />
+        </form>
+    </div>
+
+
+
+    <script src="../JS/ejer01.js"></script>
+</body>
+
+</html>

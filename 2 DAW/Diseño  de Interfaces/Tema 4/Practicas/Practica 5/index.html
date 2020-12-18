@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+
+
+
+</head>
+
+<body>
+    <label for="select">Selecciona año: </label>
+    <select name="year" id="year" onchange="addData()">
+        <option value="2020">2020</option>
+
+        <option value="2019">2019</option>
+    </select>
+    <div class="canvas">
+        <div class="canvas1">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="canvas2">
+            <canvas id="radarChart"></canvas>
+        </div>
+
+    </div>
+
+    <div class="div2">
+        <div class="canvas3">
+            <canvas id="mixedChart"></canvas>
+        </div>
+        <div class="canvas4">
+            <canvas id="donutChart"></canvas>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

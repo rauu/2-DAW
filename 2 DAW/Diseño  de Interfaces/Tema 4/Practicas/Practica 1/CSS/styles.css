@@ -1,0 +1,15 @@
+body,
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+}
+
+button {
+    height: 50px;
+    background-color: #bac4b9;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #bbf0b6;
+}

@@ -1,0 +1,23 @@
+#barChart {
+    width: 650px;
+    margin: auto auto;
+}
+
+.canvas,
+.div2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.canvas1,
+.canvas2,
+.canvas3,
+.canvas4 {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}

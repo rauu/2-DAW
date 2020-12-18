@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script src="../JS/script.js" defer></script>
+</head>
+
+<body>
+
+    <form action="" id="form">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br>
+        <br>
+        <label for="apellidos">Apellido: </label>
+        <input type="text" name="apellidos" id="apellidos" required>
+        <br>
+        <br>
+        <label for="dni">DNI: </label>
+        <input type="text" name="dni" id="dni" required>
+        <br>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <br>
+        <label for="color">Color:</label>
+        <input type="checkbox" name="colores" id="rojo" value="rojo">Rojo
+        <input type="checkbox" name="colores" id="azul" value="azul">Azul
+        <input type="checkbox" name="colores" id="verde" value="verde">Verde
+        <br>
+        <br>
+
+        <button type="button" onclick="guardar()">Guardar</button>
+        <button type="button" onclick="recuperar()">Recuperar</button>
+        <button type="button" onclick="borrar()">Borrar Almacenamiento</button>
+
+
+    </form>
+
+</body>
+
+</html>
