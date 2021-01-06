@@ -21,18 +21,29 @@ const p2 = fetch('https://jsonplaceholder.typicode.com/posts').then(response => 
 });
 
 
+//Creacion de select
+let select = document.createElement('select');
+select.options[0] = new Option("--", "--");
 Promise.all([p1, p2]).then(
     value => {
         console.log(value);
-    }
-);*/
+        for (let x = 0; x < value[0].length; x++) {
+            select.options[x + 1] = new Option(value[0][x].username, value[0][x].id);
+        }
+        document.body.appendChild(select);
 
+
+        select.onchange = () => {
+            tabla(value[1]);
+        };
+    }
+);
+*/
 
 
 
 
 //Crear un conjunto de promesas ​​que deban resolverse ambas para continuarcon su ejecución usando la estructura Async/Await ​(3.5pts)
-//Crear un select con una parte de los resultados obtenidos en una de laspeticiones y en base al opción seleccionada mostrar los contenidosrelacionados de la segunda consulta. (3pts)
 
 
 
@@ -71,8 +82,7 @@ loadJsonPost('https://jsonplaceholder.typicode.com/posts')
     });
 */
 
-let select = document.createElement('select');
-select.options[0] = new Option("--", "--");
+
 
 async function loadJsonUser(url) {
     let response = await fetch(url);
@@ -82,7 +92,11 @@ async function loadJsonUser(url) {
     }
     thrownewError(response.status);
 }
-window.onload = loadJsonUser('https://jsonplaceholder.typicode.com/users')
+
+//Creacion de select
+let select = document.createElement('select');
+select.options[0] = new Option("--", "--");
+loadJsonUser('https://jsonplaceholder.typicode.com/users')
     .then(j => {
         console.log(j);
         for (let x = 0; x < j.length; x++) {
@@ -102,8 +116,23 @@ async function loadJsonPost(url) {
     thrownewError(response.status);
 }
 
+loadJsonPost('https://jsonplaceholder.typicode.com/posts')
+    .then(j => {
+        console.log(j);
+        select.onchange = () => {
+            tabla(j);
+        };
+    }).catch(e => {
+        console.log(e);
+    });
 
-function tabla() {
+
+function tabla(data) {
+    if (document.getElementsByTagName("table").length > 0) {
+        for (let i = 0; i < document.getElementsByTagName("table").length; i++) {
+            document.getElementsByTagName("table")[i].parentElement.removeChild(document.getElementsByTagName("table")[i]);
+        }
+    }
     let table = document.createElement('table');
     let tr = document.createElement('tr');
     let th_titulo = document.createElement('th');
@@ -111,82 +140,33 @@ function tabla() {
     let new_tbody = document.createElement('tbody');
 
 
+
     th_titulo.innerHTML = "Titular";
     th_cuerpo.innerHTML = "Cuerpo";
 
     tr.appendChild(th_titulo);
     tr.appendChild(th_cuerpo);
-    table.appendChild(th_titulo);
-    table.appendChild(th_cuerpo);
-
-    select.onchange = () => {
-        /*td.innerHTML = "sdf";
-        tr.appendChild(td);*/
-        loadJsonPost('https://jsonplaceholder.typicode.com/posts')
-            .then(j => {
-                console.log(j);
-                for (let x = 0; x < j.length; x++) {
-                    if (j[x].userId == select.value) {
-                        let td_titular = document.createElement('td');
-                        let td_cuerpo = document.createElement('td');
-                        let tr_body = document.createElement('tr');
-                        td_titular.innerHTML = j[x].title;
-                        td_cuerpo.innerHTML = j[x].body;
-                        tr_body.appendChild(td_titular);
-                        tr_body.appendChild(td_cuerpo);
-                        new_tbody.appendChild(tr_body);
-                        table.appendChild(new_tbody);
-                        //table.appendChild(tr_body);
-
-
-                    }
-                }
-
-
-            }).catch(e => {
-                console.log(e);
-            });
-
-    };
     table.appendChild(tr);
 
+    for (let x = 0; x < data.length; x++) {
+        if (data[x].userId == select.value) {
+            let td_titular = document.createElement('td');
+            let td_cuerpo = document.createElement('td');
+            let tr_body = document.createElement('tr');
+            td_titular.innerHTML = data[x].title;
+            td_cuerpo.innerHTML = data[x].body;
+            tr_body.appendChild(td_titular);
+            tr_body.appendChild(td_cuerpo);
+            new_tbody.appendChild(tr_body);
+
+
+
+
+            table.appendChild(new_tbody);
+            //table.appendChild(tr_body);
+
+
+        }
+    }
     document.body.appendChild(table);
 }
-
-window.onload = tabla();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prctica 3</title>
-    <script src="../JS/script.js" defer></script>
-</head>
-
-<body>
-
-</body>
-
-</html>

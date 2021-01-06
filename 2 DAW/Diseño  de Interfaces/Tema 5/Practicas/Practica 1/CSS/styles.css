@@ -1,0 +1,23 @@
+#carouselExampleIndicators {
+    padding: 0;
+}
+
+img {
+    height: 100vh;
+}
+
+.green {
+    background-color: #A4FF9F;
+}
+
+.red {
+    background-color: #FF9F9F;
+}
+
+.violet {
+    background-color: #D49FFF;
+}
+
+.height {
+    height: 100px;
+}
