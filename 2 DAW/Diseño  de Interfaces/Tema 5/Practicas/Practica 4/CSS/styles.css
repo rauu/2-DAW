@@ -1,0 +1,28 @@
+:root {
+    --fuente-normal-h1: 1.75em;
+    --fuente-normal-p: 1.25em;
+    --background-color: white;
+    --text-color: black;
+}
+
+.div1 {
+    --background-color: black;
+    --text-color: grey;
+    background-color: var(--background-color);
+    color: var(--text-color)
+}
+
+.div2 {
+    --background-color: blue;
+    --text-color: black;
+    background-color: var(--background-color);
+    color: var(--text-color)
+}
+
+h1 {
+    font-size: var(--fuente-normal-h1);
+}
+
+p {
+    font-size: var(--fuente-normal-p);
+}
