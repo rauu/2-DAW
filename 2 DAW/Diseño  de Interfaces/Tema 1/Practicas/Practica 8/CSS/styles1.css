@@ -1,0 +1,176 @@
+body {
+    margin: auto;
+    background-color: #e6daa3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 10px;
+}
+
+input {
+    margin-top: 5px;
+    height: 20px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgb(238, 51, 18);
+    border: 1px solid rgb(238, 51, 18);
+}
+
+.form {
+    background-color: #faf8f0;
+    border: 2px solid black;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.inline1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.inline2 {
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    margin-bottom: 1%;
+}
+
+.direccion {
+    padding: 10px;
+    width: 50%;
+}
+
+.name:hover,
+.direccion:hover,
+.email:hover,
+.telefono:hover {
+    background-color: #dbc87d;
+}
+
+.text {
+    display: none;
+}
+
+.name {
+    padding: 10px;
+    width: 50%;
+}
+
+span {
+    color: red;
+}
+
+label {
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.email {
+    padding: 10px;
+    width: 50%;
+}
+
+.telefono {
+    padding: 10px;
+    width: 50%;
+}
+
+#button {
+    float: right;
+    height: 40px;
+    background-color: #e6daa3;
+}
+
+#button:hover {
+    float: right;
+    height: 40px;
+    background-color: #dbc87d;
+    cursor: pointer;
+}
+
+.municipio {
+    margin-left: 5%;
+}
+
+.pais {
+    margin-left: 17%;
+}
+
+.movil {
+    margin-left: 41%;
+}
+
+@media screen and (max-width: 1200px) {
+    .inline1 {
+        display: block;
+    }
+    .inline2 {
+        display: block;
+    }
+    .form {
+        margin-top: 20%;
+    }
+    .name:hover {
+        background-color: transparent;
+    }
+    .direccion:hover {
+        background-color: #dbc87d;
+    }
+    .form {
+        width: 70%;
+    }
+    .movil {
+        margin-left: 30%;
+    }
+    .direccion {
+        width: 90%;
+    }
+    .name {
+        width: 100%;
+    }
+    .direccion:hover .text {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .inline1 {
+        display: block;
+    }
+    .inline2 {
+        display: block;
+    }
+    .form {
+        margin-top: 20%;
+    }
+    .name:hover {
+        background-color: transparent;
+    }
+    .direction {
+        width: 100%;
+    }
+    .direccion:hover {
+        background-color: #dbc87d;
+    }
+    .form {
+        width: 60%;
+    }
+    input {
+        width: 10em;
+    }
+    .direccion:hover .text {
+        display: block;
+    }
+}

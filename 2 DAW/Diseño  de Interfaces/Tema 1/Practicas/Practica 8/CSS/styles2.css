@@ -1,0 +1,129 @@
+span {
+    color: red;
+}
+
+body {
+    margin: auto;
+    background-color: #e6daa3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 10px;
+}
+
+input {
+    margin-top: 5px;
+    height: 20px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgb(238, 51, 18);
+    border: 1px solid rgb(238, 51, 18);
+}
+
+.form {
+    background-color: #faf8f0;
+    border: 2px solid black;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.text {
+    width: 30%;
+    float: right;
+    margin-left: 30%;
+    display: none;
+}
+
+.direccion {
+    padding: 10px;
+    display: flex;
+}
+
+.direccion:hover .text {
+    display: flex;
+}
+
+.name {
+    padding: 10px;
+    width: 50%;
+    display: flex;
+}
+
+.name_heading {
+    margin-right: 5%;
+}
+
+.email_heading {
+    margin-right: 5%;
+}
+
+.telefono_heading {
+    margin-right: 5%;
+}
+
+.input_heading {
+    margin-left: 5%;
+}
+
+.input_name {
+    margin-left: 9%;
+}
+
+.input_telefono {
+    margin-left: 4%;
+}
+
+.input_email {
+    margin-left: 5%;
+}
+
+label {
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.email {
+    padding: 10px;
+    display: flex;
+}
+
+.telefono {
+    padding: 10px;
+    display: flex;
+}
+
+#button {
+    float: right;
+    height: 40px;
+    background-color: #e6daa3;
+}
+
+#button:hover {
+    float: right;
+    height: 40px;
+    background-color: #dbc87d;
+    cursor: pointer;
+}
+
+.municipio {
+    margin-left: 5%;
+}
+
+.pais {
+    margin-left: 17%;
+}
+
+.movil {
+    margin-left: 41%;
+}

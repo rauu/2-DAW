@@ -1,0 +1,14 @@
+<div>
+    <img [src]="IEvento.image" alt="image" class="card-img-top img-fluid">
+    <div class="card-body">
+        <h4 class="card-title card-text">{{IEvento.title | titlecase}}</h4>
+        <p class="card-text card-text">{{IEvento.description}}</p>
+        <div class="text-right">
+            <button class="btn btn-danger ml-3" (click)="deleteEvento(IEvento.title)">Delete</button>
+        </div>
+    </div>
+    <div class="card-footer text-muted card-text">
+        {{IEvento.date | date:'d/M/y'}}
+        <span class="float-right card-text">{{IEvento.price | currency: 'EUR'}}</span>
+    </div>
+</div>

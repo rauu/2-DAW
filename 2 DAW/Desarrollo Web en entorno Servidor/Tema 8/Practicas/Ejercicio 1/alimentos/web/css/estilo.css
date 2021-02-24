@@ -78,5 +78,9 @@ th {
 
 footer {
     border-top: 1px solid black;
-    text-align: center;
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+
 }

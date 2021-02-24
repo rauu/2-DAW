@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+  <h1>
+    Ficha de libro
+  </h1>
+
+  {% if libro %}
+    <ul>
+      <li><strong>{{ libro.titulo|upper }}</strong></li>
+      <li><strong>Teléfono</strong>: {{ libro.autor }}</li>
+      <li><strong>E-mail</strong>: {{ libro.paginas }}</li>
+    </ul>
+  {% else %}
+    <p>
+     Libro no encontrado
+    </p>
+  {% endif %}
+{% endblock %}

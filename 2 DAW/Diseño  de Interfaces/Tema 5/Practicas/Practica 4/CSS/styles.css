@@ -6,15 +6,11 @@
 }
 
 .div1 {
-    --background-color: black;
-    --text-color: grey;
     background-color: var(--background-color);
     color: var(--text-color)
 }
 
 .div2 {
-    --background-color: blue;
-    --text-color: black;
     background-color: var(--background-color);
     color: var(--text-color)
 }

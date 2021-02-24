@@ -1,0 +1,30 @@
+<evento-add (pasarArray) = "addForm($event)"></evento-add>
+
+
+<div class="card-block color">
+    <form class="form mt-3">
+        <div class="form-group row">
+            <div class="col-sm">
+                <a (click)="fecha()" class="ordenar">Ordenar por fecha </a>
+                <a (click)="precio()" class="ordenar"> Ordenar por precio</a>
+            </div>
+            <div class="col-sm-3">
+                <input type="text" [(ngModel)]="filterSearch" class="form-control" name="filterDesc" id="filterDesc" placeholder="Buscar">
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="card-columns mt-4">
+    <!-- Aquí listaremos los eventos -->
+
+    <event-item class="card" *ngFor="let IEvento of IEventos | eventFilter:filterSearch" [IEvento]="IEvento" (delete) = "delete(IEvento.title)">
+
+    </event-item>
+    <div *ngIf="IEventos.length == 0">
+        <h3>No hay eventos disponibles</h3>
+    </div>
+
+
+</div>

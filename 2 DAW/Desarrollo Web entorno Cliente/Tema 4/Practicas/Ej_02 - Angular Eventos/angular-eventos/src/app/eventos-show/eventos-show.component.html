@@ -1,0 +1,69 @@
+<form class="mt-4">
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" class="form-control" name="title"
+      [(ngModel)]="newEvento.title" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="name">Descripcion</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+      name="description"
+      [(ngModel)]="newEvento.description" placeholder="Enter Description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="image">Imagen</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1"
+      [(ngModel)]="newEvento.image" placeholder="Enter Image" #fileinput
+      (change)="changeImage(fileinput)">
+
+  </div>
+  <div class="form-group">
+    <label for="name">Fecha</label>
+    <input type="text" class="form-control" name="date"
+      [(ngModel)]="newEvento.date" placeholder="Enter Date">
+  </div>
+  <div class="form-group">
+    <label for="name">Precio</label>
+    <input type="text" class="form-control" name="price"
+      [(ngModel)]="newEvento.price" placeholder="Enter Price">
+  </div>
+  <img [src] = "newEvento.image" class="img-thumbnail" alt="Selected Image">
+  <br>
+  <button type="submit" class="btn btn-primary" (click)="addEvent()">Submit</button>
+</form>
+
+<div class="card-block color">
+  <form class="form mt-3">
+    <div class="form-group row">
+      <div class="col-sm">
+        <a (click)="fecha()" class="ordenar">Ordenar por fecha </a>
+        <a (click)="precio()" class="ordenar"> Ordenar por precio</a>
+      </div>
+      <div class="col-sm-3">
+        <input type="text" [(ngModel)]="filterSearch" class="form-control"
+          name="filterDesc" id="filterDesc" placeholder="Buscar">
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="card-columns mt-4">
+  <!-- Aquí listaremos los eventos -->
+
+  <div class="card" *ngFor="let IEvento of IEventos |
+    eventFilter:filterSearch">
+    <img [src]="IEvento.image" alt="image" class="card-img-top img-fluid">
+    <div class="card-body">
+      <h4 class="card-title card-text">{{IEvento.title | titlecase}}</h4>
+      <p class="card-text card-text">{{IEvento.description}}</p>
+    </div>
+    <div class="card-footer text-muted card-text">
+      {{IEvento.date | date:'d/M/y'}}
+      <span class="float-right card-text">{{IEvento.price | currency: 'EUR'}}</span>
+    </div>
+  </div>
+  <div *ngIf="IEventos.length == 0">
+    <h3>No hay eventos disponibles</h3>
+  </div>
+</div>

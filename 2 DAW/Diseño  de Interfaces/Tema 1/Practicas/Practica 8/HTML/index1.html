@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/styles1.css " />
+    <title>Practica 8</title>
+</head>
+
+<body>
+
+
+
+    <div class="form">
+        <form action="#" method="get">
+            <h1>Formulario de alta</h1><br><br>
+
+            <div class="inline1">
+
+                <div class="name">
+
+                    <label><strong>Nombre y apellidos</strong> <span>*</span></label><br>
+                    <input type="text" name="name" id="name"><br>
+                    <label for="name" class="input">Nombre</label><br>
+                    <input type="text" name="primerApellido" id="primerApellido" size="40"><br>
+                    <label for="primerApellido" class="input">Primer Apellido</label><br>
+                    <input type="text" name="segundoApellido" id="segundoApellido" size="40"><br>
+                    <label for="segundoApellido" class="input">Segundo Apellido</label>
+
+                </div>
+
+                <div class="direccion">
+
+                    <label><strong>Dirección</strong> <span>*</span></label><br>
+                    <input type="text" name="calle" id="calle" size="40"><br>
+                    <label for="calle" class="input">Calle, número, piso, puerta</label><br>
+                    <input type="text" name="postal" id="postal" size="15">
+                    <input type="text" name="municipio" id="municipio"><br>
+                    <label for="postal">Código postal</label>
+                    <label for="municipio" class="municipio">Municipio</label><br>
+                    <input list="provincias" size="15">
+                    <input list="pais" size="15"><br>
+                    <label>Provincia</label>
+                    <label class="pais">Pais</label>
+
+
+                    <datalist id="provincias">
+                        <option>Alicante</option>
+                        <option>Valencia</option>
+                        <option>Murcia</option>
+                        <option>Madrid</option>
+                    </datalist>
+                    <datalist id="pais">
+                        <option>España</option>
+                        <option>India</option>
+                        <option>Francia</option>
+                        <option>Austria</option>
+                    </datalist>
+                    <div class="text">
+                        <p>El codigo postal es imprescindible para poder recibir los pedidos</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inline2">
+
+                <div class="email">
+                    <label><strong>Email</strong> <span style="color: red;">*</span></label><br>
+                    <input type="email" name="email" id="email" size="40">
+                </div>
+                <div class="telefono">
+                    <label><strong>Telefono</strong> <span style="color: red;">*</span></label><br>
+                    <input type="tel" name="fijo" id="fijo">
+                    <input type="tel" name="movil" id="movil"><br>
+                    <label for="fijo">Fijo</label>
+                    <label for="movil" class="movil">Móvil</label>
+                </div>
+
+            </div>
+
+            <input type="submit" id="button" value="Darme de alta">
+
+        </form>
+    </div>
+
+</body>
+
+</html>

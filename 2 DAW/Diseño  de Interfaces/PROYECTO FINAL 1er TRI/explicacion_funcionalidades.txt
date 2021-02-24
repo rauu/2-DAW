@@ -1,0 +1,17 @@
+Buenos dias Jose Carlos,
+
+Aquí escribo algunas funciones de la pagina web que solo funucionan en algunos sitos.
+
+- El boton de suscripcion solamente funciona en la pagina principal. Al pulsar se muestra un texto abajo.
+
+
+- En la pagina de inicio hay un boton extra para si el usuario es un usuario gratuito pues, que se abra su diseño. Y si es un usuario normal pues se puede pulsar al INICIAR SESSION.
+
+- En la configuarion del usuario al guardar cambios pues se muestra un mensaje arriba para mostrar que se ha modificado los cambios.
+Tambien hay un otro boton si en el caso que los datos introducidos en el formulario son incorrecto pues se muestre la pagina con el error.
+
+
+- En la parte del elegir videos para ver pues hay un icono del like. Solamente funcionan el primero y el que esta en "CLASES EN ABIERTO"
+Funciona en los dos partes del usuario(gratuido y el de pago).
+
+Gracias y un saludo

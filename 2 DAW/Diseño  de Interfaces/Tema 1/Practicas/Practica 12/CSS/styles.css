@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "Header Header Header Header Header" "Aside1 Main Main Main Aside2" "Aside1 Main Main Main Aside2" ". Footer Footer Footer .";
+    height: 100vh;
+}
+
+.Header {
+    grid-area: Header;
+}
+
+.Aside1 {
+    grid-area: Aside1;
+}
+
+.Main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "Submenu1 Submenu2 Submenu3" "SubMenu-Footer SubMenu-Footer SubMenu-Footer";
+    grid-area: Main;
+}
+
+.Submenu1 {
+    grid-area: Submenu1;
+}
+
+.Submenu2 {
+    grid-area: Submenu2;
+}
+
+.Submenu3 {
+    grid-area: Submenu3;
+}
+
+.SubMenu-Footer {
+    grid-area: SubMenu-Footer;
+}
+
+.Aside2 {
+    grid-area: Aside2;
+}
+
+.Footer {
+    grid-area: Footer;
+}
+
+.border {
+    border: 1px solid red;
+}

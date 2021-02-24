@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+	<h1>
+		Listado de libros
+	</h1>
+
+	{% if libros %}
+		{% for libro in libros %}
+			{% if libro %}
+				<ul>
+					<li>
+						<a href="{{ path( 'libro', { isbn: libro.isbn } ) }}">
+							{{ libro.titulo }}
+						</a>
+						<a href="{{ path( 'eliminarLibro', { isbn: libro.isbn } ) }}">
+							Eliminar libro
+						</a>
+					</li>
+
+				</ul>
+			{% else %}
+				<p>
+					Libro no encontrado
+				</p>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}

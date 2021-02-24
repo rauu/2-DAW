@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<nav>
+		<ul>
+			<li>
+				<a href="{{ path('inicio') }}">Inicio</a>
+			</li>
+			<li>
+				<a href="{{ path('libros') }}">Ver Libros</a>
+			</li>
+			<li>
+				<a href="{{ path('login') }}">LOGIN</a>
+			</li>
+			{% if is_granted('ROLE_ADMIN') %}
+				<li>
+					<a href="{{ path('nuevo') }}">Insertar Libro</a>
+				</li>
+				<li>
+					<a href="{{ path('usuario') }}">Insertar Usuario</a>
+				</li>
+			{% endif %}
+		</ul>
+	</nav>
+
+	{% block main %}
+		<main></main>
+	{% endblock %}
+
+	<footer>
+		<p>
+			-Desarrollo Web en Entorno Servidor <a href="{{ path('logout') }}">Cerrar sesión</a>-
+		</p>
+	</footer>
+{% endblock %}

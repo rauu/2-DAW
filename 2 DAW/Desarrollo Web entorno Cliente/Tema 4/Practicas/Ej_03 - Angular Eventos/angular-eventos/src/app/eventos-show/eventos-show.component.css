@@ -1,0 +1,16 @@
+.color {
+  background-color: #F8F9FB;
+  padding: 1px;
+}
+
+.card-text {
+  white-space: pre-wrap;
+}
+
+.ordenar{
+  cursor: pointer;
+}
+
+.ordenar:hover{
+  text-decoration: none;
+}

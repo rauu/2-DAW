@@ -1,0 +1,32 @@
+{% block title %}
+  Contactos
+{% endblock %} {% block body %}
+  <h1>
+    Listado de contactos
+  </h1>
+  {% if contactos %}
+    {% for contacto in contactos %}
+      {% if contacto %}
+        {{
+          include(
+            'datos_contacto.html.twig',
+            {
+              contacto: contacto
+            }
+          )
+        }}
+      {% else %}
+        <p>
+          Contacto no encontrado
+        </p>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p>
+      No se han encontrado contactos
+    </p>
+  {% endif %}
+  <p>
+    <a href="{{ path('inicio') }}">Pulsa aquí</a>
+  </p>
+{% endblock %}

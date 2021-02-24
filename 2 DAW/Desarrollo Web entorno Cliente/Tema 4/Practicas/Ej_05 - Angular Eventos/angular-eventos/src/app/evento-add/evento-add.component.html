@@ -1,0 +1,26 @@
+<form class="mt-4" (ngSubmit) = "addEvent()">
+  <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" class="form-control" name="title" [ngModelOptions]="{standalone: true}" [(ngModel)]="newEvento.title" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+      <label for="name">Descripcion</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" [ngModelOptions]="{standalone: true}" [(ngModel)]="newEvento.description" placeholder="Enter Description"></textarea>
+  </div>
+  <div class="form-group">
+      <label for="image">Imagen</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" [ngModelOptions]="{standalone: true}" [(ngModel)]="newEvento.image" placeholder="Enter Image" #fileinput (change)="changeImage(fileinput)">
+
+  </div>
+  <div class="form-group">
+      <label for="name">Fecha</label>
+      <input type="text" class="form-control" name="date" [(ngModel)]="newEvento.date" [ngModelOptions]="{standalone: true}" placeholder="Enter Date">
+  </div>
+  <div class="form-group">
+      <label for="name">Precio</label>
+      <input type="text" class="form-control" name="price" [(ngModel)]="newEvento.price" [ngModelOptions]="{standalone: true}" placeholder="Enter Price">
+  </div>
+  <img [src]="newEvento.image" class="img-thumbnail" alt="Selected Image">
+  <br>
+  <button type="submit" class="btn btn-primary" >Submit</button>
+</form>

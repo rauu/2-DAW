@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %}Libros
+{% endblock %}
+{% block body %}
+	<h1>Buscar libro</h1>
+	{{ form_start(formulario) }}
+	{{ form_widget(formulario) }}
+	{{ form_end(formulario) }}
+	{% if titulo %}
+		<ul>
+			{% for libro in titulo %}
+				<li>
+					<strong>{{libro.titulo}}</strong>
+				</li>
+				<li>
+					<em>{{libro.autor}}</em>
+				</li>
+				<li>{{libro.paginas}}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Libro no encontrado</p>
+	{% endif %}
+{% endblock %}

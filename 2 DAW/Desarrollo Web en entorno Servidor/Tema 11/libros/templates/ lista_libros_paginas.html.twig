@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+	<h1>
+		Listado de libros
+	</h1>
+
+	{% if paginas %}
+		{% for pagina in paginas %}
+			{% if pagina %}
+				<ul>
+					<li>
+						<a href="{{ path( 'libro', { isbn: pagina.isbn } ) }}">
+							{{ pagina.titulo }}
+						</a>
+					</li>
+
+				</ul>
+			{% else %}
+				<p>
+					Libro no encontrado
+				</p>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}
